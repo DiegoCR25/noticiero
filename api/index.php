@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/svg+xml"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/newspaper.svg?v=2">
-
+    <link rel="icon" href="favicon.ico">
 
     <title>DIARIO EL HOCICÓN</title>
 
@@ -34,7 +32,7 @@
       <?php
         include("secciones/portada.php");
       ?>
-      <div class="jumbotron p-3 p-md-5 text-white rounded bg-primary">
+      <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
         <div class="col-md-12 px-0">
           <h1 class="display-4 font-italic">
             <?php
@@ -77,9 +75,9 @@
                 ?>
               </p>
               <p class="card-text mb-auto">
-                <?php if (!empty($internacional["imagen"])): ?>
-                  <img src="<?php echo $internacional["imagen"]; ?>" class="img-fluid mb-3 rounded shadow-sm" alt="Imagen de la noticia internacional">
-                <?php endif; ?>
+                <?php
+                  echo $internacional["imagen"];
+                ?>
               </p>
             </div>
           </div>
@@ -106,9 +104,9 @@
                 ?>
               </p>
               <p class="card-text mb-auto">
-                <?php if (!empty($nacional["imagen"])): ?>
-                  <img src="<?php echo $nacional["imagen"]; ?>" class="img-fluid mb-3 rounded shadow-sm" alt="Imagen de la noticia nacional">
-                <?php endif; ?>
+                <?php
+                  echo $nacional["imagen"];
+                ?>
               </p>
             </div>
           </div>
@@ -591,6 +589,3 @@
     </script>
   </body>
 </html>
-
-
-
