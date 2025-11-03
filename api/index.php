@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+    <link rel="icon" href="favicon.ico">
 
     <title>DIARIO EL HOCICÓN</title>
 
@@ -74,6 +74,11 @@
                   echo $internacional["resumen"];
                 ?>
               </p>
+              <p class="card-text mb-auto">
+                <?php
+                  echo $internacional["imagen"];
+                ?>
+              </p>
             </div>
           </div>
         </div>
@@ -96,6 +101,11 @@
               <p class="card-text mb-auto">
                 <?php
                   echo $nacional["resumen"];
+                ?>
+              </p>
+              <p class="card-text mb-auto">
+                <?php
+                  echo $nacional["imagen"];
                 ?>
               </p>
             </div>
