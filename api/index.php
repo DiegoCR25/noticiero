@@ -77,9 +77,9 @@
                 ?>
               </p>
               <p class="card-text mb-auto">
-                <?php
-                  echo $internacional["imagen"];
-                ?>
+                <?php if (!empty($internacional["imagen"])): ?>
+                  <img src="<?php echo $internacional["imagen"]; ?>" class="img-fluid mb-3 rounded shadow-sm" alt="Imagen de la noticia internacional">
+                <?php endif; ?>
               </p>
             </div>
           </div>
@@ -106,9 +106,9 @@
                 ?>
               </p>
               <p class="card-text mb-auto">
-                <?php
-                  echo $nacional["imagen"];
-                ?>
+                <?php if (!empty($nacional["imagen"])): ?>
+                  <img src="<?php echo $nacional["imagen"]; ?>" class="img-fluid mb-3 rounded shadow-sm" alt="Imagen de la noticia nacional">
+                <?php endif; ?>
               </p>
             </div>
           </div>
@@ -591,5 +591,6 @@
     </script>
   </body>
 </html>
+
 
 
