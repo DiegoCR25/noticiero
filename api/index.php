@@ -32,7 +32,7 @@
       <?php
         include("secciones/portada.php");
       ?>
-      <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+      <div class="jumbotron p-3 p-md-5 text-white rounded bg-primary">
         <div class="col-md-12 px-0">
           <h1 class="display-4 font-italic">
             <?php
@@ -74,11 +74,11 @@
                   echo $internacional["resumen"];
                 ?>
               </p>
-              <p class="card-text mb-auto">
-                <?php
-                  echo $internacional["imagen"];
-                ?>
-              </p>
+              <?php if (!empty($internacional["imagen"])): ?>
+                <img src="<?php echo $internacional["imagen"]; ?>"
+                    class="img-fluid mb-3 rounded shadow-sm"
+                    alt="Imagen de la noticia internacional">
+              <?php endif; ?>
             </div>
           </div>
         </div>
@@ -104,9 +104,11 @@
                 ?>
               </p>
               <p class="card-text mb-auto">
-                <?php
-                  echo $nacional["imagen"];
-                ?>
+                <?php if (!empty($nacional["imagen"])): ?>
+                  <img src="<?php echo $nacional["imagen"]; ?>"
+                      class="img-fluid mb-3 rounded shadow-sm"
+                      alt="Imagen de la noticia nacional">
+                <?php endif; ?>
               </p>
             </div>
           </div>
